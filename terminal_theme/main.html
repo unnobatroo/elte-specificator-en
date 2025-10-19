@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config.site_name }}</title>
     
-    {# Load your custom CSS #}
+    {# FIX: Change 'css/main.css' to get the correct path from the site root #}
     <link rel="stylesheet" href="{{ 'css/main.css' | url }}">
 </head>
 <body class="terminal-body">
@@ -17,6 +17,7 @@
             <ul class="nav-list">
                 {% for nav_item in nav %}
                     <li class="nav-item">
+                        {# This should be correct already, as the 'url' filter handles the path #}
                         <a href="{{ nav_item.url | url }}" class="nav-link {% if nav_item.active %}active{% endif %}">
                             {{ nav_item.title }}
                         </a>
@@ -27,7 +28,6 @@
         
         {# --- Content Area --- #}
         <main class="content-area">
-            {# The actual page content, rendered by MkDocs #}
             {{ page.content }}
         </main>
     </div>
