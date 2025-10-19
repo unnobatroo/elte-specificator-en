@@ -7,18 +7,18 @@ nav:
 
 theme:
     name: 'material'
-    custom_dir: overrides/
+    custom_dir: overrides/  # <-- DIRECTS MKDOCS TO USE YOUR OVERRIDE FOLDER
     palette:
-      scheme: slate
-      primary: black
-      accent: lime
+      scheme: slate       # Dark base
+      primary: black      # Set the primary color to black
+      accent: lime        # Set the accent color to neon green
       
     features:
         - navigation.top
         - navigation.prev_next
         - navigation.prune
         
-    extra_css:
+    extra_css:            # <-- LOADS YOUR CUSTOM STYLES
       - css/main.css
         
 markdown_extensions:
