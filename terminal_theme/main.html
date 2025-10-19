@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config.site_name }}</title>
+    
+    {# Load your custom CSS #}
+    <link rel="stylesheet" href="{{ 'css/main.css' | url }}">
+</head>
+<body class="terminal-body">
+    <div class="window-container">
+        
+        {# --- Navigation (Sidebar) --- #}
+        <nav class="sidebar">
+            <div class="title-bar">MENU</div>
+            <ul class="nav-list">
+                {% for nav_item in nav %}
+                    <li class="nav-item">
+                        <a href="{{ nav_item.url | url }}" class="nav-link {% if nav_item.active %}active{% endif %}">
+                            {{ nav_item.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        
+        {# --- Content Area --- #}
+        <main class="content-area">
+            {# The actual page content, rendered by MkDocs #}
+            {{ page.content }}
+        </main>
+    </div>
+    
+    {# --- Footer / Trademark --- #}
+    <footer class="terminal-footer">
+        Made with <span class="neon-heart">&hearts;</span> by 
+        <a href="https://github.com/unnobatroo" target="_blank" rel="noopener">Jaloliddin Ismailov</a>, 2025.
+    </footer>
+</body>
+</html>

@@ -6,21 +6,9 @@ nav:
     - 'How to input data': how-to-input-data.md
 
 theme:
-    name: 'material'
-    custom_dir: overrides/  # <-- DIRECTS MKDOCS TO USE YOUR OVERRIDE FOLDER
-    palette:
-      scheme: slate       # Dark base
-      primary: black      # Set the primary color to black
-      accent: lime        # Set the accent color to neon green
-      
-    features:
-        - navigation.top
-        - navigation.prev_next
-        - navigation.prune
-        
-    extra_css:            # <-- LOADS YOUR CUSTOM STYLES
-      - css/main.css
-        
+    name: null
+    custom_dir: terminal_theme/
+    
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
