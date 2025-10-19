@@ -1,0 +1,22 @@
+site_name: ELTE IK's Specificator documentation
+
+nav: 
+    - Home: index.md
+    - 'How to write a specification': how-to-write-a-specification.md
+    - 'How to input data': how-to-input-data.md
+
+theme:
+    name: 'material'
+    palette:
+      primary: 'blue'
+      
+    features:
+        - navigation.top
+        - navigation.prev_next
+        - navigation.prune
+        
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
