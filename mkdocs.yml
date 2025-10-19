@@ -7,13 +7,19 @@ nav:
 
 theme:
     name: 'material'
+    custom_dir: overrides/
     palette:
-      primary: 'blue'
+      scheme: slate
+      primary: black
+      accent: lime
       
     features:
         - navigation.top
         - navigation.prev_next
         - navigation.prune
+        
+    extra_css:
+      - css/main.css
         
 markdown_extensions:
   - attr_list
