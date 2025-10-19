@@ -1,16 +1,29 @@
 site_name: ELTE IK's Specificator documentation
 
+site_url: https://unnobatroo.github.io/elte-specificator-en/
+# Assuming your repository is named elte-specificator-en
+repo_url: https://github.com/unnobatroo/elte-specificator-en
+
 nav: 
     - Home: index.md
     - 'How to write a specification': how-to-write-a-specification.md
     - 'How to input data': how-to-input-data.md
 
 theme:
-    name: null                  # Disable Material theme
-    custom_dir: terminal_theme/ # Use your custom HTML template
-    
-extra_css:                      # <--- THIS IS KEY FOR PATH RESOLUTION
-  - overrides/css/main.css      # MkDocs will correctly link this on all pages
+    name: 'material'       # <-- Use Material Theme
+    palette:
+      scheme: slate        # <-- Dark/Black background
+      primary: black       # <-- Primary elements (header) are black
+      accent: grey         # <-- Accent color (links, highlights) is subtle grey
+      
+    features:
+        - navigation.top
+        - navigation.prev_next
+        - navigation.prune
+        
+# --- KEY CHANGE: Add your custom CSS here for ALL PAGES ---
+extra_css:
+  - overrides/css/main.css
 
 markdown_extensions:
   - attr_list
