@@ -322,28 +322,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#student-data-specification" class="md-nav__link">
+  <a href="#1-array-of-records-eg-student-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Student Data Specification
+      1. Array of Records (e.g., Student Data)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Student Data Specification">
+    <nav class="md-nav" aria-label="1. Array of Records (e.g., Student Data)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#json-like-format" class="md-nav__link">
+  <a href="#jsonlist-format-example" class="md-nav__link">
     <span class="md-ellipsis">
-      JSON-like Format
+      JSON/List Format Example
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#yaml-like-format" class="md-nav__link">
+  <a href="#yamlblock-format-example" class="md-nav__link">
     <span class="md-ellipsis">
-      YAML-like Format
+      YAML/Block Format Example
     </span>
   </a>
   
@@ -355,37 +355,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#single-student-object" class="md-nav__link">
+  <a href="#2-single-object-and-elementary-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Single Student Object
+      2. Single Object and Elementary Values
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Single Student Object">
+    <nav class="md-nav" aria-label="2. Single Object and Elementary Values">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#yaml-format" class="md-nav__link">
+  <a href="#single-student-object-s" class="md-nav__link">
     <span class="md-ellipsis">
-      YAML Format
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#json-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      JSON Format
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#boolean-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Boolean Value
+      Single Student Object (s)
     </span>
   </a>
   
@@ -431,28 +413,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#student-data-specification" class="md-nav__link">
+  <a href="#1-array-of-records-eg-student-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Student Data Specification
+      1. Array of Records (e.g., Student Data)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Student Data Specification">
+    <nav class="md-nav" aria-label="1. Array of Records (e.g., Student Data)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#json-like-format" class="md-nav__link">
+  <a href="#jsonlist-format-example" class="md-nav__link">
     <span class="md-ellipsis">
-      JSON-like Format
+      JSON/List Format Example
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#yaml-like-format" class="md-nav__link">
+  <a href="#yamlblock-format-example" class="md-nav__link">
     <span class="md-ellipsis">
-      YAML-like Format
+      YAML/Block Format Example
     </span>
   </a>
   
@@ -464,37 +446,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#single-student-object" class="md-nav__link">
+  <a href="#2-single-object-and-elementary-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Single Student Object
+      2. Single Object and Elementary Values
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Single Student Object">
+    <nav class="md-nav" aria-label="2. Single Object and Elementary Values">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#yaml-format" class="md-nav__link">
+  <a href="#single-student-object-s" class="md-nav__link">
     <span class="md-ellipsis">
-      YAML Format
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#json-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      JSON Format
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#boolean-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Boolean Value
+      Single Student Object (s)
     </span>
   </a>
   
@@ -525,19 +489,20 @@
 
 
 <h1 id="how-to-input-data"><strong>How to input data</strong></h1>
-<h2 id="student-data-specification">Student Data Specification</h2>
-<p>The main data is represented by the <code>students</code> array, which holds objects for individual students. Each student object uses the keys <strong>name</strong> and <strong>grade</strong>.</p>
-<h3 id="json-like-format">JSON-like Format</h3>
-<p>List-based declaration for the student data.</p>
-<pre><code>students: [
+<p>The Specificator tool accepts data in various formats (JSON-like and YAML-like) that must precisely match the structure defined in your formal specification.</p>
+<h2 id="1-array-of-records-eg-student-data">1. Array of Records (e.g., Student Data)</h2>
+<p>The main data structure often involves an array of records (objects), such as a <code>students</code> array, where each object holds defined keys (e.g., <strong>name</strong> and <strong>grade</strong>).</p>
+<h3 id="jsonlist-format-example">JSON/List Format Example</h3>
+<p>This format uses square brackets and commas, common in JSON structures.</p>
+<pre><code class="language-json">students: [
     {name: &quot;Álmos&quot;, grade: 3},
     {name: &quot;Győző&quot;, grade: 5},
     {name: &quot;Géza&quot;, grade: 4},
 ]
 </code></pre>
-<h3 id="yaml-like-format">YAML-like Format</h3>
-<p>Structure the same data using a more traditional YAML block format.</p>
-<pre><code>students:
+<h3 id="yamlblock-format-example">YAML/Block Format Example</h3>
+<p>This format uses clear indentation and dashes, which can be more readable for complex or lengthy data sets.</p>
+<pre><code class="language-yaml">students:
     - name: Győző
       grade: 5
     - name: Álmos
@@ -545,21 +510,21 @@
     - name: Géza
       grade: 2
 </code></pre>
-<h2 id="single-student-object">Single Student Object</h2>
+<h2 id="2-single-object-and-elementary-values">2. Single Object and Elementary Values</h2>
+<p>Data for single variables is defined directly under the variable name.</p>
+<h3 id="single-student-object-s">Single Student Object (s)</h3>
 <p>The variable <code>s</code> (for <strong>student</strong>) represents a single object, defining a name and a grade for one entry.</p>
-<h3 id="yaml-format">YAML Format</h3>
-<p>Definition for the single student object.</p>
-<pre><code>s:
+<p><strong>YAML Format:</strong></p>
+<pre><code class="language-yaml">s:
   name: Győző
   grade: 5
 </code></pre>
-<h3 id="json-format">JSON Format</h3>
-<p>Equivalent structure shown in a JSON format.</p>
-<pre><code>s: {name: &quot;Győző&quot;, grade:5}
+<p><strong>JSON Format:</strong></p>
+<pre><code class="language-json">s: {name: &quot;Győző&quot;, grade:5}
 </code></pre>
-<h3 id="boolean-value">Boolean Value</h3>
-<p>A simple logical (Boolean) variable that is set to true.</p>
-<pre><code>included: true
+<p><strong>Logical (Boolean) Value</strong></p>
+<p>A simple example defining a logical variable.</p>
+<pre><code class="language-yaml">included: true
 </code></pre>
 
 

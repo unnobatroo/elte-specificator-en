@@ -415,18 +415,17 @@
 <h2 id="quick-start-guide">Quick Start Guide</h2>
 <ol>
 <li><strong>Enter the Specification:</strong> Define your formal specification in the main editor panel.</li>
-<li><strong>Define the Data:</strong> In the right-hand panel, press <strong>Ctrl + Space</strong> to generate a base data structure, then enter your test data.</li>
-<li><strong>Validate Result:</strong><ul>
-<li>If the test case turns <strong>green</strong>, the data has satisfied the specification.</li>
-<li>This validation process confirms the correctness of your specification for that specific input.</li>
+<li><strong>Define the Data:</strong> In the right-hand panel, press <strong>Ctrl+Space</strong> to generate a base data structure, then enter your test data.</li>
+<li><strong>Validation Result:</strong> If the test case turns <strong>green</strong>, the data has satisfied the specification.<ul>
+<li>This result validates the correctness of the specification for that input.</li>
 </ul>
 </li>
-<li><strong>Debugging (Advanced):</strong> Use the "Evaluate" button to display the evaluation step-by-step. While this feature is limited to simpler cases, it can be useful for debugging complex logical expressions.</li>
+<li><strong>Debugging:</strong> Use the "Evaluate" button to display the step-by-step evaluation. This is useful for debugging, though it only works in simpler cases.</li>
 </ol>
 <h2 id="example-specification">Example Specification</h2>
 <p>This example checks if a student record (<code>s</code>) exists within an array of student records (<code>students</code>).</p>
 <p>```text
-In: n <span class="arithmatex">\(\in\)</span> <span class="arithmatex">\(\mathbb{N}\)</span>, students <span class="arithmatex">\(\in\)</span> Student[1..n], Student = (name: <span class="arithmatex">\(\mathbb{S}\)</span> x grade: [1..5]), s <span class="arithmatex">\(\in\)</span> Student
+In: n <span class="arithmatex">\(\in\)</span> <span class="arithmatex">\(\mathbb{N}\)</span>, students <span class="arithmatex">\(\in\)</span> Student[1..n], Student=(name:S x grade:[1..5]), s <span class="arithmatex">\(\in\)</span> Student
 Out: found <span class="arithmatex">\(\in\)</span> <span class="arithmatex">\(\mathbb{L}\)</span>
 Pre: -
 Post: found = <span class="arithmatex">\(\exists\)</span> index <span class="arithmatex">\(\in\)</span> [1..n] : (students[index].name = s.name)</p>
