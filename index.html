@@ -278,6 +278,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quick-start-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-specification" class="md-nav__link">
     <span class="md-ellipsis">
       Example Specification
@@ -365,6 +374,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quick-start-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-specification" class="md-nav__link">
     <span class="md-ellipsis">
       Example Specification
@@ -392,24 +410,26 @@
   
 
 
-<h1 id="using-the-specificator-tool"><strong>Using the Specificator tool</strong></h1>
+<h1 id="using-the-specificator-tool">Using the Specificator Tool</h1>
+<p>The Specificator tool helps validate data against formal specifications. This guide outlines the steps for using the tool and provides an example structure.</p>
+<h2 id="quick-start-guide">Quick Start Guide</h2>
 <ol>
-<li>Enter the specification.</li>
-<li>In the right panel, press <strong>Ctrl+Space</strong> to get a base structure.
-    Enter the data.</li>
-<li>If the test case turns green, then:<ul>
-<li>The data satisfied the specification; or vice versa.</li>
-<li>The data validated the correctness of the specification.</li>
+<li><strong>Enter the Specification:</strong> Define your formal specification in the main editor panel.</li>
+<li><strong>Define the Data:</strong> In the right-hand panel, press <strong>Ctrl + Space</strong> to generate a base data structure, then enter your test data.</li>
+<li><strong>Validate Result:</strong><ul>
+<li>If the test case turns <strong>green</strong>, the data has satisfied the specification.</li>
+<li>This validation process confirms the correctness of your specification for that specific input.</li>
 </ul>
 </li>
-<li>With the "Evaluate" button, the evaluation can also be displayed step-by-step. (Unfortunately, it only works in simpler cases, but it's good for debugging.)</li>
+<li><strong>Debugging (Advanced):</strong> Use the "Evaluate" button to display the evaluation step-by-step. While this feature is limited to simpler cases, it can be useful for debugging complex logical expressions.</li>
 </ol>
-<h3 id="example-specification">Example Specification</h3>
-<pre><code class="language-text">In:n∈N, students∈Student[1..n], Student=(name:S x grade:[1..5]), s∈Student
-Out: found∈L
+<h2 id="example-specification">Example Specification</h2>
+<p>This example checks if a student record (<code>s</code>) exists within an array of student records (<code>students</code>).</p>
+<p>```text
+In: n <span class="arithmatex">\(\in\)</span> <span class="arithmatex">\(\mathbb{N}\)</span>, students <span class="arithmatex">\(\in\)</span> Student[1..n], Student = (name: <span class="arithmatex">\(\mathbb{S}\)</span> x grade: [1..5]), s <span class="arithmatex">\(\in\)</span> Student
+Out: found <span class="arithmatex">\(\in\)</span> <span class="arithmatex">\(\mathbb{L}\)</span>
 Pre: -
-Post: found = ∃ index ∈ [1..n]:(students[index].name = s.name)
-</code></pre>
+Post: found = <span class="arithmatex">\(\exists\)</span> index <span class="arithmatex">\(\in\)</span> [1..n] : (students[index].name = s.name)</p>
 
 
 
@@ -468,6 +488,8 @@ Post: found = ∃ index ∈ [1..n]:(students[index].name = s.name)
     
     
       <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
