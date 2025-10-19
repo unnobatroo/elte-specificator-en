@@ -6,9 +6,12 @@ nav:
     - 'How to input data': how-to-input-data.md
 
 theme:
-    name: null
-    custom_dir: terminal_theme/
+    name: null                  # Disable Material theme
+    custom_dir: terminal_theme/ # Use your custom HTML template
     
+extra_css:                      # <--- THIS IS KEY FOR PATH RESOLUTION
+  - overrides/css/main.css      # MkDocs will correctly link this on all pages
+
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
