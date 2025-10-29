@@ -29,7 +29,7 @@ These are used for handling many elements of the same type.
 
 * `x1∈N[1..3]`: An array of **3 natural numbers**, with index range **1..3**. (Element referencing: e.g., `x1[2]`).
 * `n∈N, x∈Z[1..n]`: The array size `n` is part of the input, and the array `x` is indexed from `1` to `n`.
-* x3 $\in$ $\mathbb{N}$[1..]: An array of natural numbers of some length, indexed from 1. The actual length is determined by the input data.
+* `x3∈N[1..]`: An array of natural numbers of some length, indexed from 1. The actual length is determined by the input data.
 
 ---
 
@@ -41,18 +41,18 @@ Post-conditions use logical and mathematical expressions to define what **must b
 
 | Example | Keywords | Description |
 | :--- | :--- | :--- |
-| $\forall i \in [1..5]: (i>0)$ | $\forall$ (forall) | **For all** $i$ in the set $[1..5]$, the statement is true. |
-| $\exists i \in [1..3]: (i=2)$ | $\exists$ (exists) | **There exists** an $i$ in the set $[1..3]$ such that the statement is true. |
+| `∀i∈[1..5]:(i>0)` | $\forall$ (forall) | **For all** $i$ in the set $[1..5]$, the statement is true. |
+| `∃i∈[1..3]: (i=2)` | $\exists$ (exists) | **There exists** an $i$ in the set $[1..3]$ such that the statement is true. |
 
 ### **Array and Matrix Operations**
 
-* **Statement on All Elements:** $\forall i \in [1..n]: (x[i] > 10)$
-* **Statement on At Least One Element:** $\exists i \in [1..n]: (x[i] < 3)$
-* **Using Length Function:** $\exists i \in [1..\text{length}(x3)]: (x3[i] < 3)$
-* **Nested Quantifier (Matrix Example):** $\forall i \in [1..8]: (\exists j \in [1..8]: (m1[i, j] = 10))$
+* **Statement on All Elements:** `∀i∈[1..n]: (x[i] > 10)`
+* **Statement on At Least One Element:** `∃i∈[1..n]: (x[i] < 3)`
+* **Using Length Function:** `∃i∈[1..len(x3)]:(x3[i]<3)`
+* **Nested Quantifier (Matrix Example):** `∀i∈[1..8]:(∃j∈[1..8]:(m1[i,j]=10))`
 
 ### **Structuring Data**
 
-* **Records (Structs):** Fields are referenced using dot notation: $r1.\text{name}="Victor" \land r1.\text{grade}=5$. (The symbol $\land$ is logical AND).
-* **Tuples:** Elements are referenced by their number (1-indexed): $(3, 5).1=3 \land (3, 5).2=5$.
-* **Array Equality:** Checks if two arrays are identical: $[1, 2, 3]=[1, 2, 3]$.
+* **Records (Structs):** Fields are referenced using dot notation: `r1.name="Victor" ∧ r1.grade=5`. (The symbol $\land$ is logical AND).
+* **Tuples:** Elements are referenced by their number (1-indexed): `(3,5).1=3 ∧ (3,5).2=5`.
+* **Array Equality:** Checks if two arrays are identical: `[1, 2, 3]=[1, 2, 3]`.

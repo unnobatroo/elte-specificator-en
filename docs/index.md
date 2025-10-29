@@ -16,11 +16,13 @@ The Specificator tool helps validate data against formal specifications. This gu
 
 This example checks if a student record ($s$) exists within an array of student records ($students$).
 
-In:  n $\in$ $\mathbb{N}$,
-     students $\in$ Student[1..n],  
-     Student=(name:$\mathbb{S}$ x grade:[1..5]),  
-     s $\in$ Student  
-Out: found $\in$ $\mathbb{L}$  
+```
+In:  n∈N,
+     students∈Student[1..n],  
+     Student=(name:S x grade:[1..5]),  
+     s∈Student  
+Out: found∈L
 Pre: -  
-Post: found = $\exists$ index $\in$ [1..n] : 
-      ($\text{students}[\text{index}].\text{name} = s.\text{name}$)
+Post: found = ∃index∈[1..n]: 
+      (students[index].name = s.name)
+```
