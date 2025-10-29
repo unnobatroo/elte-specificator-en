@@ -1,7 +1,6 @@
 site_name: ELTE IK's Specificator documentation
 
 site_url: https://unnobatroo.github.io/elte-specificator-en/
-# Assuming your repository is named elte-specificator-en
 repo_url: https://github.com/unnobatroo/elte-specificator-en
 
 nav: 
@@ -10,17 +9,32 @@ nav:
     - 'How to input data': how-to-input-data.md
 
 theme:
-    name: 'material'       # <-- Use Material Theme
+    name: 'material'
+    # Define an array of palettes to enable the switch
     palette:
-      scheme: slate        # <-- Dark/Black background
-      primary: black       # <-- Primary elements (header) are black
-      accent: grey         # <-- Accent color (links, highlights) is subtle grey
-      
+      # Palette 1: Dark Mode (Default)
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: black
+        accent: grey
+        toggle:
+          icon: material/brightness-4 # Icon for Light Mode
+          name: Switch to light mode
+          
+      # Palette 2: Light Mode (User Switch)
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: black
+        accent: grey
+        toggle:
+          icon: material/brightness-7 # Icon for Dark Mode
+          name: Switch to dark mode
+          
     features:
         - navigation.top
         - navigation.prev_next
         - navigation.prune
-        
+
 # --- KEY CHANGE: Add your custom CSS here for ALL PAGES ---
 extra_css:
   - overrides/css/main.css

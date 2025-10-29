@@ -1,67 +1,74 @@
-/* --- Professional Monochromatic Tweaks (Using Material Theme Variables) --- */
+/* * 🚨 CRITICAL CHANGE: Wrap all dark-mode specific styles 
+ * inside the selector for the 'slate' scheme (dark theme).
+ * This ensures they only apply when the dark palette is active.
+ */
+[data-md-color-scheme="slate"] {
+  /* --- Professional Monochromatic Tweaks (Using Material Theme Variables) --- */
 
-:root {
-  /* Ensure a true black background for the content area */
-  --md-default-bg-color: #000000;
-  /* Use a bright, readable gray for primary text */
-  --md-default-fg-color: #d8d8d8;
-  /* Make headings a clear, slightly brighter white */
-  --md-typeset-heading-color: #ffffff;
-}
+  /* Override Material's variables for the slate theme only */
+  :root {
+    /* Ensure a true black background for the content area */
+    --md-default-bg-color: #000000;
+    /* Use a bright, readable gray for primary text */
+    --md-default-fg-color: #d8d8d8;
+    /* Make headings a clear, slightly brighter white */
+    --md-typeset-heading-color: #ffffff;
+  }
 
-/* Ensure structural elements follow the slate scheme's dark mode */
-.md-header,
-.md-nav,
-.md-footer {
-  background-color: #1a1a1a; /* Very dark grey for structural elements */
-  border: none; /* Remove any border lines */
-}
+  /* Ensure structural elements follow the slate scheme's dark mode */
+  .md-header,
+  .md-nav,
+  .md-footer {
+    background-color: #1a1a1a; /* Very dark grey for structural elements */
+    border: none; /* Remove any border lines */
+  }
 
-/* Keep the sidebar and header borders subtle */
-.md-nav--primary {
-  border-right: 1px solid #333333; 
-}
-.md-header {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
-}
+  /* Keep the sidebar and header borders subtle */
+  .md-nav--primary {
+    border-right: 1px solid #333333; 
+  }
+  .md-header {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+  }
 
-/* Code Blocks: Professional Dark Mode */
-.md-typeset code,
-.md-typeset pre {
-  background-color: #141414; /* Darker than the surrounding text area */
-  color: #c0c0c0; /* Light grey text */
-  border-left: 3px solid #666666; /* Subtle grey vertical highlight */
-  border-radius: 0;
-  box-shadow: none;
-}
-.md-typeset code {
-  padding: 0.1em 0.3em;
-}
+  /* Code Blocks: Professional Dark Mode */
+  .md-typeset code,
+  .md-typeset pre {
+    background-color: #141414; /* Darker than the surrounding text area */
+    color: #c0c0c0; /* Light grey text */
+    border-left: 3px solid #666666; /* Subtle grey vertical highlight */
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .md-typeset code {
+    padding: 0.1em 0.3em;
+  }
 
 
-/* --- Custom Footer Style (Keeping the Neon Touch) --- */
+  /* --- Custom Footer Style (Keeping the Neon Touch) --- */
 
-/* The overall footer style is handled by the Material theme, 
-   but we style our custom text block to keep your trademark look */
-.md-footer-copyright {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.8rem;
-  color: #00FF00; /* Neon Green Text for the trademark */
-  text-shadow: 0 0 3px rgba(0, 255, 0, 0.5); /* Subtle glow */
-}
+  /* The overall footer style is handled by the Material theme, 
+     but we style our custom text block to keep your trademark look */
+  .md-footer-copyright {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: #00FF00; /* Neon Green Text for the trademark */
+    text-shadow: 0 0 3px rgba(0, 255, 0, 0.5); /* Subtle glow */
+  }
 
-/* Custom heart color (Pink/Purple from your previous attempt) */
-.md-footer-copyright .neon-heart {
-    color: #FF00FF; 
-    text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
-}
+  /* Custom heart color (Pink/Purple from your previous attempt) */
+  .md-footer-copyright .neon-heart {
+      color: #FF00FF; 
+      text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+  }
 
-/* Link style in the footer */
-.md-footer-copyright a {
-    color: inherit;
-    border-bottom: 1px dashed #00FF00;
-}
-.md-footer-copyright a:hover {
-    color: #00FF00;
-    border-bottom: 1px solid #00FF00;
-}
+  /* Link style in the footer */
+  .md-footer-copyright a {
+      color: inherit;
+      border-bottom: 1px dashed #00FF00;
+  }
+  .md-footer-copyright a:hover {
+      color: #00FF00;
+      border-bottom: 1px solid #00FF00;
+  }
+} /* END of [data-md-color-scheme="slate"] */
