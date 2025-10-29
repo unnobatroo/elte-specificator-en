@@ -14,7 +14,7 @@ The Specificator tool helps validate data against formal specifications. This gu
 
 ## **Example Specification (Readable Formatting)**
 
-This example checks if a student record ($s$) exists within an array of student records ($students$).
+This example checks if a student record (`s`) exists within an array of student records (`students`).
 
 ```
 In:  n∈N,
