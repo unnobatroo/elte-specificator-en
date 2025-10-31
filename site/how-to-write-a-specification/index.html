@@ -57,7 +57,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-post-conditions-textpost">2. Post-Conditions (\(\text{Post}:\))</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2-post-conditions-post">2. Post-Conditions Post:</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#logical-quantifiers">Logical Quantifiers</a>
     </li>
@@ -103,7 +103,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="how-to-write-a-specification">How to Write a Specification</h1>
-<p>A formal specification defines the relationship between <strong>input</strong> (<span class="arithmatex">\(\text{In}:\)</span>) and <strong>output</strong> (<span class="arithmatex">\(\text{Out}:\)</span>), constrained by <strong>pre-conditions</strong> (<span class="arithmatex">\(\text{Pre}:\)</span>) and guaranteed by <strong>post-conditions</strong> (<span class="arithmatex">\(\text{Post}:\)</span>).</p>
+<p>A formal specification defines the relationship between <strong>input</strong> <code>In:</code> and <strong>output</strong> <code>Out:</code>, constrained by <strong>pre-conditions</strong> <code>Pre:</code> and guaranteed by <strong>post-conditions</strong> <code>Post:</code>.</p>
 <h2 id="input-declaration-in"><strong>Input Declaration <code>In:</code></strong></h2>
 <p>Declarations follow the simple pattern: data_name <span class="arithmatex">\(\in\)</span> Set. Data names should start with a <strong>lowercase letter</strong>, and declarations are separated by commas.</p>
 <h3 id="elementary-sets"><strong>Elementary Sets</strong></h3>
@@ -171,50 +171,116 @@
 </tbody>
 </table>
 <h3 id="indexed-sequences-and-arrays"><strong>Indexed Sequences and Arrays</strong></h3>
-<p>These are used for handling many elements of the same type.</p>
-<ul>
-<li><code>x1∈N[1..3]</code>: An array of <strong>3 natural numbers</strong>, with index range <strong>1..3</strong>. (Element referencing: e.g., <code>x1[2]</code>).</li>
-<li><code>n∈N, x∈Z[1..n]</code>: The array size <code>n</code> is part of the input, and the array <code>x</code> is indexed from <code>1</code> to <code>n</code>.</li>
-<li><code>x3∈N[1..]</code>: An array of natural numbers of some length, indexed from 1. The actual length is determined by the input data.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Notation</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Indexing/Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>x1∈N[1..3]</code></td>
+<td style="text-align: left;">An array of <strong>3 natural numbers</strong>.</td>
+<td style="text-align: left;">Index range <strong>1..3</strong>. (Element referencing: e.g., <code>x1[2]</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>n∈N, x∈Z[1..n]</code></td>
+<td style="text-align: left;">The array size <code>n</code> is part of the input, and the array <code>x</code> is composed of integers.</td>
+<td style="text-align: left;">Indexed from <code>1</code> to <code>n</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>x3∈N[1..]</code></td>
+<td style="text-align: left;">An array of natural numbers of some unknown length.</td>
+<td style="text-align: left;">Indexed starting from <code>1</code>. The actual length is determined by the input data.</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="2-post-conditions-textpost"><strong>2. Post-Conditions (<span class="arithmatex">\(\text{Post}:\)</span>)</strong></h2>
+<h2 id="2-post-conditions-post"><strong>2. Post-Conditions <code>Post:</code></strong></h2>
 <p>Post-conditions use logical and mathematical expressions to define what <strong>must be true</strong> after the operation is complete.</p>
 <h3 id="logical-quantifiers"><strong>Logical Quantifiers</strong></h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Example</th>
 <th style="text-align: left;">Keywords</th>
+<th style="text-align: left;">Example</th>
 <th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>∀i∈[1..5]:(i&gt;0)</code></td>
 <td style="text-align: left;"><span class="arithmatex">\(\forall\)</span> (forall)</td>
+<td style="text-align: left;"><code>∀i∈[1..5]:(i&gt;0)</code></td>
 <td style="text-align: left;"><strong>For all</strong> <span class="arithmatex">\(i\)</span> in the set <span class="arithmatex">\([1..5]\)</span>, the statement is true.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>∃i∈[1..3]: (i=2)</code></td>
 <td style="text-align: left;"><span class="arithmatex">\(\exists\)</span> (exists)</td>
+<td style="text-align: left;"><code>∃i∈[1..3]: (i=2)</code></td>
 <td style="text-align: left;"><strong>There exists</strong> an <span class="arithmatex">\(i\)</span> in the set <span class="arithmatex">\([1..3]\)</span> such that the statement is true.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="array-and-matrix-operations"><strong>Array and Matrix Operations</strong></h3>
-<ul>
-<li><strong>Statement on All Elements:</strong> <code>∀i∈[1..n]: (x[i] &gt; 10)</code></li>
-<li><strong>Statement on At Least One Element:</strong> <code>∃i∈[1..n]: (x[i] &lt; 3)</code></li>
-<li><strong>Using Length Function:</strong> <code>∃i∈[1..len(x3)]:(x3[i]&lt;3)</code></li>
-<li><strong>Nested Quantifier (Matrix Example):</strong> <code>∀i∈[1..8]:(∃j∈[1..8]:(m1[i,j]=10))</code></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operation</th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>All elements</strong> (Universal Quantifier)</td>
+<td style="text-align: left;"><code>∀i∈[1..n]: (x[i] &gt; 10)</code></td>
+<td style="text-align: left;">Used to assert a property holds for every element in a sequence or array.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>At least one element</strong> (Existential Quantifier)</td>
+<td style="text-align: left;"><code>∃i∈[1..n]: (x[i] &lt; 3)</code></td>
+<td style="text-align: left;">Used to assert that a property holds for one or more elements in a sequence or array.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Length function</strong> (<code>len</code>)</td>
+<td style="text-align: left;"><code>∃i∈[1..len(x3)]:(x3[i]&lt;3)</code></td>
+<td style="text-align: left;">Dynamically determines the size of an array <span class="arithmatex">\(\text{x3}\)</span> (where the length is not fixed) for quantification.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nested Quantifier</strong> (Matrix)</td>
+<td style="text-align: left;"><code>∀i∈[1..8]:(∃j∈[1..8]:(m1[i,j]=10))</code></td>
+<td style="text-align: left;">Used for two-dimensional structures (matrices) where a property is checked across rows and columns.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="structuring-data"><strong>Structuring Data</strong></h3>
-<ul>
-<li><strong>Records (Structs):</strong> Fields are referenced using dot notation: <code>r1.name="Victor" ∧ r1.grade=5</code>. (The symbol <span class="arithmatex">\(\land\)</span> is logical AND).</li>
-<li><strong>Tuples:</strong> Elements are referenced by their number (1-indexed): <code>(3,5).1=3 ∧ (3,5).2=5</code>.</li>
-<li><strong>Array Equality:</strong> Checks if two arrays are identical: <code>[1, 2, 3]=[1, 2, 3]</code>.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Data Structure</th>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Records (Structs):</strong></td>
+<td style="text-align: left;"><code>r1.name="Victor" ∧ r1.grade=5</code></td>
+<td style="text-align: left;">Fields are referenced using dot notation. (The symbol <span class="arithmatex">\(\land\)</span> is logical AND).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tuples:</strong></td>
+<td style="text-align: left;"><code>(3,5).1=3 ∧ (3,5).2=5</code></td>
+<td style="text-align: left;">Elements are referenced by their number (1-indexed).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Array Equality:</strong></td>
+<td style="text-align: left;"><code>[1, 2, 3]=[1, 2, 3]</code></td>
+<td style="text-align: left;">Checks if two arrays are identical.</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div><footer>
