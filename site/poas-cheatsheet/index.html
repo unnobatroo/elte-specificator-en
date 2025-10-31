@@ -92,8 +92,8 @@
 <tr>
 <th style="text-align: left;">#</th>
 <th style="text-align: left;">Pattern</th>
-<th style="text-align: left;">Description</th>
 <th style="text-align: left;">Structure</th>
+<th style="text-align: left;">Description</th>
 <th style="text-align: left;">Underlying Loop Structure</th>
 </tr>
 </thead>
@@ -101,78 +101,78 @@
 <tr>
 <td style="text-align: left;">1</td>
 <td style="text-align: left;"><strong>Summation</strong></td>
-<td style="text-align: left;">Calculates the <strong>sum</strong> <code>s</code> of a function <code>f(i)</code> for all elements <span class="arithmatex">\(i\)</span> in a given integer interval <code>[b..e]</code>.</td>
 <td style="text-align: left;"><code>s = SUM(i=b..e, f(i))</code></td>
+<td style="text-align: left;">Calculates the <strong>sum</strong> <code>s</code> of a function <code>f(i)</code> for all elements <span class="arithmatex">\(i\)</span> in a given integer interval <code>[b..e]</code>.</td>
 <td style="text-align: left;">Counting Loop</td>
 </tr>
 <tr>
 <td style="text-align: left;">2</td>
 <td style="text-align: left;"><strong>Counting</strong></td>
-<td style="text-align: left;">Determines the <strong>number of times</strong> <code>cnt</code> a condition <code>A(i)</code> is true on the interval <code>[b..e]</code>.</td>
 <td style="text-align: left;"><code>cnt = COUNT(i=b..e, A(i))</code></td>
+<td style="text-align: left;">Determines the <strong>number of times</strong> <code>cnt</code> a condition <code>A(i)</code> is true on the interval <code>[b..e]</code>.</td>
 <td style="text-align: left;">Counting Loop</td>
 </tr>
 <tr>
 <td style="text-align: left;">3</td>
 <td style="text-align: left;"><strong>Maximum Selection</strong></td>
-<td style="text-align: left;">Finds the <strong>index</strong> <code>maxind</code> and <strong>maximum value</strong> <code>maxval</code> of a function <code>f(i)</code> on a non-empty interval <code>[b..e]</code>.</td>
 <td style="text-align: left;"><code>maxind, maxval = MAX(i=b..e, f(i))</code></td>
+<td style="text-align: left;">Finds the <strong>index</strong> <code>maxind</code> and <strong>maximum value</strong> <code>maxval</code> of a function <code>f(i)</code> on a non-empty interval <code>[b..e]</code>.</td>
 <td style="text-align: left;">Counting Loop</td>
 </tr>
 <tr>
 <td style="text-align: left;">4</td>
 <td style="text-align: left;"><strong>Minimum Selection</strong></td>
-<td style="text-align: left;">Finds the <strong>index</strong> <code>minind</code> and <strong>minimum value</strong> <code>minval</code> of a function <code>f(i)</code> on a non-empty interval <code>[b..e]</code>.</td>
 <td style="text-align: left;"><code>minind, minval = MIN(i=b..e, f(i))</code></td>
+<td style="text-align: left;">Finds the <strong>index</strong> <code>minind</code> and <strong>minimum value</strong> <code>minval</code> of a function <code>f(i)</code> on a non-empty interval <code>[b..e]</code>.</td>
 <td style="text-align: left;">Counting Loop</td>
 </tr>
 <tr>
 <td style="text-align: left;">5</td>
 <td style="text-align: left;"><strong>Copy</strong></td>
-<td style="text-align: left;">Creates a new sequence (<span class="arithmatex">\(y\)</span>) by assigning to every element in the interval <code>[b..e]</code> the value produced by the function <code>f(i)</code>.</td>
 <td style="text-align: left;"><code>y = COPY(i=b..e, f(i))</code></td>
+<td style="text-align: left;">Creates a new sequence (<span class="arithmatex">\(y\)</span>) by assigning to every element in the interval <code>[b..e]</code> the value produced by the function <code>f(i)</code>.</td>
 <td style="text-align: left;">Counting Loop</td>
 </tr>
 <tr>
 <td style="text-align: left;">6</td>
 <td style="text-align: left;"><strong>Multiple Item Selection (MIS)</strong></td>
-<td style="text-align: left;">Collects and lists all the values of <code>f(i)</code> from the interval <code>[b..e]</code> for which the condition <code>A(i)</code> is true. Output includes the count <code>cnt</code> and the list <code>y</code>.</td>
 <td style="text-align: left;"><code>cnt, y = MIS(i=b..e, A(i), f(i))</code></td>
+<td style="text-align: left;">Collects and lists all the values of <code>f(i)</code> from the interval <code>[b..e]</code> for which the condition <code>A(i)</code> is true. Output includes the count <code>cnt</code> and the list <code>y</code>.</td>
 <td style="text-align: left;">Counting Loop</td>
 </tr>
 <tr>
 <td style="text-align: left;">7</td>
 <td style="text-align: left;"><strong>Search</strong></td>
-<td style="text-align: left;">Determines if an element exists in the interval <code>[b..e]</code> that satisfies a condition <code>A(i)</code>, and if so, finds the <strong>first</strong> such point <code>ind</code>.</td>
 <td style="text-align: left;"><code>exists = &amp;exists; i ∈ [b..e]:(A(i))</code></td>
+<td style="text-align: left;">Determines if an element exists in the interval <code>[b..e]</code> that satisfies a condition <code>A(i)</code>, and if so, finds the <strong>first</strong> such point <code>ind</code>.</td>
 <td style="text-align: left;">Conditional Loop</td>
 </tr>
 <tr>
 <td style="text-align: left;">8</td>
 <td style="text-align: left;"><strong>Decision (Exists)</strong></td>
-<td style="text-align: left;">Determines whether a condition <code>A(i)</code> is true for <strong>at least one</strong> element in the interval <code>[b..e]</code>. Result is a single Boolean value <code>exists</code>.</td>
 <td style="text-align: left;"><code>exists = SEARCH(i=b..e, A(i))</code></td>
+<td style="text-align: left;">Determines whether a condition <code>A(i)</code> is true for <strong>at least one</strong> element in the interval <code>[b..e]</code>. Result is a single Boolean value <code>exists</code>.</td>
 <td style="text-align: left;">Conditional Loop</td>
 </tr>
 <tr>
 <td style="text-align: left;">9</td>
 <td style="text-align: left;"><strong>Selection</strong></td>
-<td style="text-align: left;">Finds the <strong>leftmost</strong> point <code>ind</code> starting from <code>b</code> where the condition <code>A(i)</code> is true, <em>assuming</em> such a point is guaranteed to exist.</td>
 <td style="text-align: left;"><code>ind = SELECT(i \ge b, A(i))</code></td>
+<td style="text-align: left;">Finds the <strong>leftmost</strong> point <code>ind</code> starting from <code>b</code> where the condition <code>A(i)</code> is true, <em>assuming</em> such a point is guaranteed to exist.</td>
 <td style="text-align: left;">Conditional Loop</td>
 </tr>
 <tr>
 <td style="text-align: left;">10</td>
 <td style="text-align: left;"><strong>Decision All</strong></td>
-<td style="text-align: left;">Determines whether a condition <code>A(i)</code> is true for <strong>all</strong> points in the interval <code>[b..e]</code>. Result is a single Boolean value <code>all</code>.</td>
 <td style="text-align: left;"><code>all = FORALL(i=b..e, A(i))</code></td>
+<td style="text-align: left;">Determines whether a condition <code>A(i)</code> is true for <strong>all</strong> points in the interval <code>[b..e]</code>. Result is a single Boolean value <code>all</code>.</td>
 <td style="text-align: left;">Conditional Loop</td>
 </tr>
 <tr>
 <td style="text-align: left;">11</td>
 <td style="text-align: left;"><strong>Conditional Max/Min Selection</strong></td>
-<td style="text-align: left;">Finds the maximum or minimum value of <code>f(i)</code> on <code>[b..e]</code>, but <strong>only among points satisfying <code>A(i)</code></strong>. Output includes a boolean <code>exists</code>.</td>
 <td style="text-align: left;"><code>exists, ind, val = CONDMAX/MIN(i=b..e, f(i), A(i))</code></td>
+<td style="text-align: left;">Finds the maximum or minimum value of <code>f(i)</code> on <code>[b..e]</code>, but <strong>only among points satisfying <code>A(i)</code></strong>. Output includes a boolean <code>exists</code>.</td>
 <td style="text-align: left;">Combined Patterns</td>
 </tr>
 </tbody>
