@@ -8,20 +8,20 @@ Declarations follow the simple pattern: data\_name $\in$ Set. Data names should 
 
 ### **Elementary sets**
 
-| Notation | Set Name | Description | Example Declaration |
+| Notation | Example Declaration | Set Name | Description |
 | :--- | :--- | :--- | :--- |
-| $\mathbb{N}$ | Natural numbers | Non-negative integers: $\{0, 1, 2, \dots\}$ | `a∈N` or `a2 eleme N`|
-| $\mathbb{Z}$ | Integers | All positive and negative whole numbers. | `b∈Z` |
-| $\mathbb{R}$ | Real numbers | All rational and irrational numbers. | `c∈R` |
-| $\mathbb{L}$ | Logical (Boolean) values | **True** or **False**. | `d∈L` |
-| $\mathbb{S}$ | Strings | Sequences of characters. | `e∈S` |
-| $\mathbb{C}$ or $\mathbb{K}$ | Characters | Single characters. | `f∈C` or `f2∈K` |
+| $\mathbb{N}$ | `a∈N` or `a2 eleme N`| Natural numbers | Non-negative integers: $\{0, 1, 2, \dots\}$ |
+| $\mathbb{Z}$ | `b∈Z` | Integers | All positive and negative whole numbers. |
+| $\mathbb{R}$ | `c∈R` | Real numbers | All rational and irrational numbers. |
+| $\mathbb{L}$ | `d∈L` | Logical (Boolean) values | **True** or **False**. |
+| $\mathbb{S}$ | `e∈S` | Strings | Sequences of characters. |
+| $\mathbb{C}$ or $\mathbb{K}$ | `f∈C` or `f2∈K` | Characters | Single characters. |
 
 ### **Intervals and ranges**
 
-| Example | Description |
+| Description | Example |
 | :--- | :--- |
-| `iv1∈[1..3]` | The value of iv1 must be an integer between 1 and 3, inclusive. |
+| The value of iv1 must be an integer between 1 and 3, inclusive. | `iv1∈[1..3]` |
 
 ### **Indexed sequences and arrays**
 
