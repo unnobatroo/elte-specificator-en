@@ -1,18 +1,18 @@
-# **Using the Specificator Tool**
+# **Using the Specificator tool**
 
 The Specificator tool helps validate data against formal specifications. This guide outlines the steps for using the tool and provides an example structure.
 
-## **Quick Start Guide**
+## **Quick start guide**
 
-1.  **Enter the Specification:** Define your formal specification in the main editor panel.
-2.  **Define the Data:** In the right-hand panel, press **Ctrl+Space** to generate a base data structure, then enter your test data.
-3.  **Validation Result:** If the test case turns **green**, the data has satisfied the specification.
+1.  **Enter the specification:** Define your formal specification in the main editor panel.
+2.  **Define the data:** In the right-hand panel, press **Ctrl+Space** to generate a base data structure, then enter your test data.
+3.  **Validation result:** If the test case turns **green**, the data has satisfied the specification.
     * This result validates the correctness of the specification for that input.
 4.  **Debugging:** Use the "Evaluate" button to display the step-by-step evaluation. This is useful for debugging, though it only works in simpler cases.
 
 ---
 
-## **Example Specification (Readable Formatting)**
+## **Example specification (readable formatting)**
 
 This example checks if a student record (`s`) exists within an array of student records (`students`).
 
