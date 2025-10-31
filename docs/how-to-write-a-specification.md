@@ -25,11 +25,11 @@ Declarations follow the simple pattern: data\_name $\in$ Set. Data names should 
 
 ### **Indexed sequences and arrays**
 
-| Notation | Description | Indexing/Length |
+| Description | Notation | Indexing/Length |
 | :--- | :--- | :--- |
-| `x1∈N[1..3]` | An array of **3 natural numbers**. | Index range **1..3**. (Element referencing: e.g., `x1[2]`). |
-| `n∈N, x∈Z[1..n]` | The array size `n` is part of the input, and the array `x` is composed of integers. | Indexed from `1` to `n`. |
-| `x3∈N[1..]` | An array of natural numbers of some unknown length. | Indexed starting from `1`. The actual length is determined by the input data. |
+| An array of **3 natural numbers**. | `x1∈N[1..3]` | Index range **1..3**. (Element referencing: e.g., `x1[2]`). |
+| The array size `n` is part of the input, and the array `x` is composed of integers. | `n∈N, x∈Z[1..n]` | Indexed from `1` to `n`. |
+| An array of natural numbers of some unknown length. | `x3∈N[1..]` | Indexed starting from `1`. The actual length is determined by the input data. |
 
 ---
 
