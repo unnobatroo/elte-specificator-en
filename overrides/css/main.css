@@ -72,7 +72,7 @@ body,
     border-bottom: 1px solid #00FF00;
 }
 
-.rst-content table td:nth-child(2) {
+.rst-content table td:nth-child(1) {
     min-width: 200px;
     white-space: nowrap;
 }
